@@ -1,10 +1,21 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Home from './pages/Home';
+import Users from './pages/Users';
 
 function App() {
   return (
-    <div>
-      <h1>Hello, world</h1>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/users">
+          <Users />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
